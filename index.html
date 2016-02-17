@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grant Gotwald</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scroll.js"></script>
+
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            color: #f5f6f7;
+            padding-bottom: 70px;
+        }
+        p {font-size: 16px;}
+        .margin {margin-bottom: 45px;}
+        .m-1{
+            margin-top:80px;
+        }
+        .bg-1 {
+            background-color: #1abc9c; /* Green */
+            color: #ffffff;
+        }
+        .bg-2 {
+            background-color: #474e5d; /* Dark Blue */
+            color: #ffffff;
+        }
+        .bg-3 {
+            background-color: #ffffff; /* White */
+            color: #555555;
+        }
+        .bg-4 {
+            background-color: #2f2f2f; /* Black Gray */
+            color: #fff;
+        }
+        .bg-5 {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+        .bg-6 {
+            background-color: #122b40;
+            color: #fff;
+        }
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+        .container-fluid {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        #contact-pad{
+            padding: 60px 50px;
+            color: #000000;
+        }
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+        .navbar-nav  li a:hover, .navbar-nav li.active a {
+            color: #1abc9c !important;
+            background-color: #a94442;
+
+        }
+
+        .navbar-nav li.active a:hover {
+            color: #555;
+            background-color: #eea236;
+        }
+
+
+        .carousel-control{
+
+            background-image: none !important;
+            width:auto;
+            outline: none;
+
+        }
+        .carousel-indicators li { visibility: hidden; }
+
+        .nav-tabs > li, .nav-pills > li {
+            float:none;
+            display:inline-block;
+            *display:inline; /* ie7 fix */
+            zoom:1; /* hasLayout ie7 trigger */
+            color:#1abc9c !important;
+        }
+
+        .nav-tabs, .nav-pills {
+            text-align:center;
+
+        }
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#me">Me</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#who">Who</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#runny">Ruuny Bunny</a></li>
+                <li><a href="#contact-pad">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- First Container-->
+
+<div class="container-fluid bg-1 text-center m-1" id="me">
+    <h3 class="margin">Grant Gotwald</h3>
+    <video autoplay loop muted class="img-responsive img-circle margin" style="display:inline" alt="Missing Element :(" width="350" height="950">
+        <source src="video/2.mp4" type="video/mp4">
+    </video>
+
+
+
+    <div id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h3>Your next employee</h3>
+            </div>
+
+            <div class="item">
+                <h3>Super Software Developer Man</h3>
+            </div>
+
+            <div class="item">
+                <h3>Slowly improving golf-ball-whacker-guy</h3>
+            </div>
+
+            <div class="item">
+                <h3>Problem: Hard to track bug.  Solution: The Grantidote</h3>
+            </div>
+            <div class="item">
+                <h3>ToDo: Enter witty, impressive quote here.</h3>
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center" id="who">
+    <h3 class="margin">Who Am I?</h3>
+    <p> I am a technology lover and creative problem solver.  I recently put my passion of technology into action and graduated with a
+        computer science degree.  This is just the beginning of my journey.  I look forward to putting to use my skills and knowledge in a challenging and something
+    environment.</p>
+    <p>A career change offers up quite a few challenges, but also gives me some advantages.  Real life experience outside of technology has given
+        me a reasonable grasp on this planets inhabitants.  As so, I carry the courage and charisma to conquer the consoles.</p>
+
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center" id="resume">
+    <h3 class="margin">My Resume</h3><br>
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">Info</a></li>
+        <li><a data-toggle="tab" href="#menu1">Highlights</a></li>
+        <li><a data-toggle="tab" href="#menu2">Education</a></li>
+        <li><a data-toggle="tab" href="#menu3">Experience</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+            <h3>Info</h3>
+            <p>Some content.</p>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Highlights</h3>
+            <p>Some content in menu 1.</p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Education</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>Work Experience</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Fourth Container -->
+<div class="container-fluid bg-4 text-center" id="projects">
+    <h3 class="margin">Projects</h3>
+    <p> Although my real world experience sucks, here is some stuff I completed during school.</p>
+    <p>Please look around the site blah blah blah.</p>
+    <a href="#" >
+        Runny Bunny on Android Play, on GitHub.
+    </a>
+    <p>Tetris:  A console based version of tetris written in C++.</p>
+    <p>Skyrock Farm:  A website built and maintained for Skyrock Farm</p>
+    <p>Bob the Bear:  An Android proof of concept game utilizing java, xml, etc.</p>
+    <p>A database driven website using php, mysql, html, css.</p>
+    <p>A simple program in C</p>
+    <p>This site! Designed using the bootstrap framework.</p>
+
+</div>
+
+<!-- Fifth Container -->
+<div class="container-fluid bg-5 text-center" id="runny">
+    <h3 class="margin">Runny Bunny</h3>
+    <p> I am a technology lover and creative problem solver.  I recently put my passion of technology into action and graduated with a
+        computer science degree.  This is just the beginning of my journey.  I look forward to putting to use my skills and knowledge in a challenging and something
+        environment.</p>
+    <p>Please look around the site blah blah blah.</p>
+
+</div>
+
+<!-- Sixth Container -->
+
+<div class="container-fluid bg-grey" id="contact-pad">
+<h2 class="text-center">CONTACT</h2>
+<div class="row">
+    <div class="col-sm-5">
+        <p>Please feel free to contact me via phone, email, or the contact form.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Circle Pines, MN</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 651.269.6536</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> GrantGotwald@gmail.com</p>
+    </div>
+    <div class="col-sm-7">
+        <div class="row">
+            <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+            </div>
+            <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+            </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+            <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-right" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <p>Created by Grant Gotwald 2016</p>
+</footer>
+
+</body>
+</html>
+
+
