@@ -14,9 +14,10 @@
         body {
             font: 20px Montserrat, sans-serif;
             line-height: 1.8;
-            color: #f5f6f7;
             padding-bottom: 70px;
+            color: #555555;
         }
+
         p {font-size: 16px;}
         .margin {margin-bottom: 45px;}
         .m-1{
@@ -42,21 +43,20 @@
             background-color: #1abc9c;
             color: #fff;
         }
-        .bg-6 {
-            background-color: #122b40;
-            color: #fff;
-        }
+
         .bg-grey {
             background-color: #f6f6f6;
+        }
+
+        .t-color {
+            color:#1abc9c;
+            font-weight: bolder;
         }
         .container-fluid {
             padding-top: 70px;
             padding-bottom: 70px;
         }
-        #contact-pad{
-            padding: 60px 50px;
-            color: #000000;
-        }
+
         .navbar {
             padding-top: 15px;
             padding-bottom: 15px;
@@ -77,12 +77,16 @@
             background-color: #eea236;
         }
 
+        .carousel{
+            interval: false;
+        }
 
         .carousel-control{
 
             background-image: none !important;
             width:auto;
             outline: none;
+            z-index: 1;
 
         }
         .carousel-indicators li { visibility: hidden; }
@@ -95,14 +99,26 @@
             color:#1abc9c !important;
         }
 
-        .nav-tabs, .nav-pills {
-            text-align:center;
+        .nav-tabs > li > a{
+            color:  #555;
+        }
 
+        .nav-tabs > li > a:hover{
+            color:#1abc9c;
+        }
+
+        .tab-content {
+            text-align: left;
+        }
+
+        .panel-footer > ul> li{
+            font-size:16px;
         }
 
     </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
 
 <!-- Navbar -->
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -113,31 +129,37 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#me">Me</a>
+            <a class="navbar-brand" href="#section-me">Me</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#who">Who</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#runny">Ruuny Bunny</a></li>
-                <li><a href="#contact-pad">Contact</a></li>
+                <li><a href="#section-who">Who</a></li>
+                <li><a href="#section-resume">Resume</a></li>
+                <li><a href="#section-projects">Projects</a></li>
+                <li><a href="#section-jumpy">Jumpy Jaguar</a></li>
+                <li><a href="#section-contact-pad">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- First Container-->
+<!-- First Container -- Picture -->
 
-<div class="container-fluid bg-1 text-center m-1" id="me">
+
+
+
+<div class="container-fluid bg-1 text-center m-1" id="section-me">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
     <h3 class="margin">Grant Gotwald</h3>
-    <video autoplay loop muted class="img-responsive img-circle margin" style="display:inline" alt="Missing Element :(" width="350" height="950">
-        <source src="video/2.mp4" type="video/mp4">
+    <video autoplay loop muted class="img-responsive img-circle margin img-rounded" style="display:inline" width="350" height="950">
+        <source src="video/3.mp4" type="video/mp4">
     </video>
 
 
 
-    <div id="myCarousel" class="carousel slide">
+
+    <!--Carousel-->
+    <div id="myCarousel" class="carousel slide" data-interval="false">
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -145,13 +167,11 @@
             <li data-target="#myCarousel" data-slide-to="2"></li>
             <li data-target="#myCarousel" data-slide-to="3"></li>
         </ol>
-
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
             <div class="item active">
                 <h3>Your next employee</h3>
             </div>
-
             <div class="item">
                 <h3>Super Software Developer Man</h3>
             </div>
@@ -178,22 +198,29 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
+        </div>
 </div>
 
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center" id="who">
+<!-- added stuff -->
+
+
+
+<!-- Second Container -- Who Am I? -->
+<div class="container-fluid bg-2 text-center" id="section-who">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
     <h3 class="margin">Who Am I?</h3>
     <p> I am a technology lover and creative problem solver.  I recently put my passion of technology into action and graduated with a
-        computer science degree.  This is just the beginning of my journey.  I look forward to putting to use my skills and knowledge in a challenging and something
-    environment.</p>
-    <p>A career change offers up quite a few challenges, but also gives me some advantages.  Real life experience outside of technology has given
-        me a reasonable grasp on this planets inhabitants.  As so, I carry the courage and charisma to conquer the consoles.</p>
-
+        bachelor's degree in computer science.  I see this as merely the beginning of my journey into the exciting field of software engineering and development.
+       </p>
+    <p>While a career change offers up some unique challenges, it also provides me some important advantages.  Real life experience outside of the field have given
+        me experience in a variety of roles with differing perspectives and responsibilities.  Coupled with my collection of software engineering skills
+        I am confident and excited to continue to learn, thrive, and succeed in a challenging and exciting career.</p>
+    </div>
 </div>
 
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center" id="resume">
+<!-- Third Container -- Resume -->
+<div class="container-fluid bg-3 text-center " id="section-resume">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
     <h3 class="margin">My Resume</h3><br>
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home">Info</a></li>
@@ -204,54 +231,238 @@
 
     <div class="tab-content">
         <div id="home" class="tab-pane fade in active">
-            <h3>Info</h3>
-            <p>Some content.</p>
+            <h3 class="text-center">General Info</h3>
+
+            <div class="panel panel-group"><h3> Grant Gotwald </h3></div>
+                 <div class="panel panel-footer">
+                    <p>4d Oak Leaf Lane
+                <br>Circle Pines, MN 55014</p>
+                <p>GrantGotwald@Gmail.com<br>
+                651-269-6536</p>
+                </div>
+            <div class="panel panel-group"> <h3>Objective:</h3></div>
+            <div class="panel panel-footer">
+            Recent graduate interested in obtaining a software engineering position with a respected company that provides technical growth
+                while leveraging my skills and knowledge.
+                </div>
         </div>
         <div id="menu1" class="tab-pane fade">
-            <h3>Highlights</h3>
-            <p>Some content in menu 1.</p>
+            <h3 class="text-center">Highlights of Qualifications</h3>
+            <div class="panel panel-group">Achievements Include:</div>
+            <div class="panel panel-footer"><ul>
+                <li>	Experience with Java, C++, C, Android, SQL, and XML.</li>
+                <li>	Knowledge of web technologies including HTML, CSS, JavaScript, PHP, Bootstrap.</li>
+                <li>	Experience with object oriented programming concepts and languages.</li>
+                <li>	Strong analytical skills with great abilities to work with multiple programming languages, databases, and programs. </li>
+                <li>	Technologically adept with ability to absorb and understand new material with ease.</li>
+                <li>	Familiarity with the software development life cycle.</li>
+                <li>	Understanding value of customer service and building relationships with business partners.</li>
+                <li>	Operated and managed two small businesses.</li>
+                <li>	Experience making important business decisions in varying situations.</li>
+            </ul>
+            </div>
         </div>
         <div id="menu2" class="tab-pane fade">
-            <h3>Education</h3>
-            <p>Some content in menu 2.</p>
+            <h3 class="text-center">Education</h3>
+
+            <div class="panel panel-group"><h3>Rasmussen College</h3>Bachelor of Science, 2013-2015</div>
+            <div class="panel panel-footer">
+
+                <h4>Major:  Computer Science</h4>
+                <h4>GPA:  3.99</h4>
+                <p> Related courses included:  Software Engineering, Mobile Application Development, Computer Graphics Programming, Software Systems Engineering, Database Systems Design, Network Systems, Algorithm Analysis
+                </p>
+
+            </div>
+
+            <div class="panel panel-group"><h3>Hamline University</h3>Bachelor of Arts, 2001-2005</div>
+            <div class="panel panel-footer">
+
+                <h4>Major 1:  Economics</h4>
+                <h4>Major 2:  Management</h4>
+
+
+            </div>
+
         </div>
         <div id="menu3" class="tab-pane fade">
-            <h3>Work Experience</h3>
-            <p>Some content in menu 2.</p>
+            <h3 class="text-center">Work Experience</h3>
+
+            <div class="panel panel-group"><h3>The Clean Team, 2012-2015</h3>
+                Owner and Operator of new construction cleaning business.
+            </div>
+            <div class="panel panel-footer">
+
+                <h4>Accomplishments include:</h4>
+                <ul>
+                   <li>	Managed and trained new employees with focus on continually increasing efficiency. </li>
+                   <li>	Implemented business strategies and processes including exploring possible avenues of growth, scheduling, and billing.</li>
+                   <li>	Planned work schedules for employees and coordinated with builders and other customers.</li>
+                   <li>	Provided leadership and motivation to employees when needed.</li>
+
+                </ul>
+            </div>
+
+            <div class="panel panel-group"><h3>Zeus Text, 2010-2012</h3>
+                Owner/Operator of marketing business.
+            </div>
+            <div class="panel panel-footer">
+
+                <h4>Responsibilities include:</h4>
+                <ul>
+                   <li>	Creation and implementation of business plan including long-term and short-term business strategies and goals.</li>
+                   <li>	Efficiently manage administrative/financial/accounting functions, sales & retention, and customer/business relations.</li>
+                   <li>	Development and maintenance of website and online presence for business.</li>
+                   <li>	Design and implementation of marketing materials and techniques to meet company goals.</li>
+                   <li>	Provide prospective and current clients with exceptional customer service to help them meet their varying business needs.</li>
+
+
+                </ul>
+            </div>
+
+            <div class="panel panel-group"><h3>Minnesota Department of Revenue, 2008-2010</h3>
+                Revenue Tax Specialist, Corporate Franchise Tax Division
+            </div>
+            <div class="panel panel-footer">
+
+                <h4>Responsibilities include:</h4>
+                <ul>
+                   <li>	Audited and reviewed S-Corporation tax returns along with associated individual income tax returns of the shareholders.</li>
+                   <li>	Analyzed, researched, and learned S-Corporation, individual income tax, and other flow through entity returns and law to become more knowledgeable in the overall area of state and federal taxation.</li>
+                   <li>	Independently worked on multiple audit issues of varying difficulty.</li>
+                   <li>	Provided service and education to external and internal customers.</li>
+                   <li>	Became efficient with department computer programs and procedures.</li>
+
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+        </div>
+</div>
+
+<!-- Fourth Container -- Projects -->
+<div class="container-fluid bg-4 text-center" id="section-projects">
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3">
+            <h2 class="text-center lato">Projects</h2>
+            <hr>
+            <p> Below are a couple of various projects I completed during school or just for fun.</p>
+            <div class="media">
+                <h3>Tetris</h3>
+                <div class="media-left">
+                    <img src="images/pic.jpg" height="100" width="100">
+                </div>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                        <span class="t-color">What: </span> A console, text-based version of the famous puzzle game <br>
+                        <span class="t-color">Technologies used: </span> C++, Microsoft Visual Studio <br>
+                        <span class="t-color">On GitHub: </span><a href="#"> Tetris</a>
+                    </p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Bop the Bear</h3>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                    <span class="t-color">What: </span> A proof of concept Android childrens game <br>
+                    <span class="t-color">Technologies used: </span> Java, Android Studio <br>
+                    <span class="t-color">On GitHub: </span><a href="#"> Bob the Bear</a>
+                    </p>
+
+                </div>
+                <div class="media-right">
+                    <img src="images/bop_the_bear.png"  height="100" width="100">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Employee Database</h3>
+                <div class="media-left">
+                    <img src="images/employeedatabase.png" height="100" width="100">
+                </div>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                        <span class="t-color">What: </span> A CRUD employee database system with both a web interface and associated Android App.
+                        <br>
+                        <span class="t-color">Technologies used: </span> MySQL, HTML, CSS, PHP, Java, Android Studio IDE, WebStorm IDE <br>
+                        <span class="t-color">On GitHub: </span><a href="#"> Employee Database</a>
+                    </p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>FootballBars.net</h3>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                        <span class="t-color">What: </span> A web application that allows user to find bars across the country to watch and support their favorite NFL Teams <br>
+                        <span class="t-color">Technologies used: </span> PHP, BOOTSTRAP, HTML, CSS, JQUERY, MySQL <br>
+                        <span class="t-color">On the web: </span><a href="http://www.footballbars.net"> FootballBars.net</a>
+                    </p>
+
+                </div>
+                <div class="media-right">
+                    <img src="images/FootballBars.JPG" height="100" width="100">
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Resume Site</h3>
+                <div class="media-left">
+                    <img src="images/gg.png" height="100" width="100" >
+                </div>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                        <span class="t-color">What: </span> The site you are on right now! <br>
+                        <span class="t-color">Technologies used: </span> Bootstrap, HTML, CSS, JQUERY <br>
+                        <span class="t-color">On the web: </span><a href="#"> GrantGotwald.com</a>
+                    </p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="media">
+                <h3>Jumpy Jaguar</h3>
+                <div class="media-body media-left" style="text-align: left">
+                    <p>
+                        <span class="t-color">What: </span> A work in progress cross platform game. <br>
+                        <span class="t-color">Technologies used: </span> LibGDX, Java, IntelliJ IDE, Android Studio IDE <br>
+                        <span class="t-color">Where: </span><a href="#"> COMING SOON!</a>
+                    </p>
+
+                </div>
+                <div class="media-right">
+                    <img src="images/jj.png" height="100" width="100" >
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
 
-<!-- Fourth Container -->
-<div class="container-fluid bg-4 text-center" id="projects">
-    <h3 class="margin">Projects</h3>
-    <p> Although my real world experience sucks, here is some stuff I completed during school.</p>
-    <p>Please look around the site blah blah blah.</p>
-    <a href="#" >
-        Runny Bunny on Android Play, on GitHub.
-    </a>
-    <p>Tetris:  A console based version of tetris written in C++.</p>
-    <p>Skyrock Farm:  A website built and maintained for Skyrock Farm</p>
-    <p>Bob the Bear:  An Android proof of concept game utilizing java, xml, etc.</p>
-    <p>A database driven website using php, mysql, html, css.</p>
-    <p>A simple program in C</p>
-    <p>This site! Designed using the bootstrap framework.</p>
 
+
+
+
+<!-- Fifth Container -- Jumpy Jaguar -->
+<div class="container-fluid bg-5 text-center" id="section-jumpy">
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+    <h3 class="margin">Jumpy Jaguar</h3>
+    <p> COMING SOON !</p>
+    <p>Jumpy Jaguar is a cross platform adventure game that will be avaiable in for Android and will be embeddable HTML Game.  It is being developed using Java and LibGDX.
+    Upon completion the game will be embedded on this site, along with links to the source code.</p>
+    </div>
 </div>
 
-<!-- Fifth Container -->
-<div class="container-fluid bg-5 text-center" id="runny">
-    <h3 class="margin">Runny Bunny</h3>
-    <p> I am a technology lover and creative problem solver.  I recently put my passion of technology into action and graduated with a
-        computer science degree.  This is just the beginning of my journey.  I look forward to putting to use my skills and knowledge in a challenging and something
-        environment.</p>
-    <p>Please look around the site blah blah blah.</p>
+<!-- Sixth Container -- Contact -->
 
-</div>
-
-<!-- Sixth Container -->
-
-<div class="container-fluid bg-grey" id="contact-pad">
+<div class="container-fluid bg-grey" id="section-contact-pad">
+    <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
 <h2 class="text-center">CONTACT</h2>
 <div class="row">
     <div class="col-sm-5">
@@ -278,12 +489,15 @@
     </div>
 </div>
 </div>
+    </div>
+
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
     <p>Created by Grant Gotwald 2016</p>
 </footer>
 
 </body>
+
 </html>
 
 
